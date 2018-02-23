@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   end
 
   get '/purchases', to: 'purchases#index'
+  
+  get '/category/:category_id', to: 'events#index'
 
   namespace :admin do
     resources :event_categories

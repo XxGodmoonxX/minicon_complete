@@ -21,8 +21,8 @@
     <card class="categories-card">
       <h4>Categories</h4>
       <ul>
-        <% @events.each do |event| %>
-          <li><a><%= event.event_category.name %></a></li>
+        <% @event_categories.each do |event_category| %>
+          <li><a><%= link_to event_category.name, "/category/#{event_category.id}" %></a></li>
         <% end %>
       </ul>
     </card>
@@ -32,4 +32,5 @@
       <a class='button button-primary u-full-width'>Search</a>
     </card>
   </sidebar>
+  
 </div>
